@@ -22,14 +22,13 @@ const MyHeader = ({ siteTitle }) => (
         defaultSelectedKeys={["1"]}
       >
         <Menu.Item key="home">Home</Menu.Item>
-        <SubMenu title="About Datum">
+        <SubMenu title="About Datum" popupClassName={styles.pops}>
           <Menu.Item key="welcome">Welcome from CEO</Menu.Item>
           <Menu.Item key="welcome2">Welcome from CEO</Menu.Item>
           <Menu.Item key="welcome3">Welcome from CEO</Menu.Item>
           <Menu.Item key="welcome4">Welcome from CEO</Menu.Item>
           <Menu.Item key="welcome5">Welcome from CEO</Menu.Item>
         </SubMenu>
-        <Menu.Item key="2">About Datum</Menu.Item>
         <Menu.Item key="3">Courses</Menu.Item>
         <Menu.Item key="4">Admission</Menu.Item>
         <Menu.Item key="5">Student Life</Menu.Item>
