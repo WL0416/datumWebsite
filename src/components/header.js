@@ -1,42 +1,53 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import PropTypes from "prop-types"
+// import { Link } from "gatsby"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+import styles from "./header.module.scss"
+import { Layout, Menu } from "antd"
+import logo from "../images/logo.svg"
+
+const { Header } = Layout
+const { SubMenu } = Menu
+
+const MyHeader = ({ siteTitle }) => (
+  <>
+    <div className={styles.logo}>
+      <img src={logo} alt={siteTitle} />
     </div>
-  </header>
+    <Header className={styles.headerBar}>
+      <Menu
+        className={styles.navs}
+        theme="dark"
+        mode="horizontal"
+        defaultSelectedKeys={["1"]}
+      >
+        <Menu.Item key="home">Home</Menu.Item>
+        <SubMenu title="About Datum">
+          <Menu.Item key="welcome">Welcome from CEO</Menu.Item>
+          <Menu.Item key="welcome2">Welcome from CEO</Menu.Item>
+          <Menu.Item key="welcome3">Welcome from CEO</Menu.Item>
+          <Menu.Item key="welcome4">Welcome from CEO</Menu.Item>
+          <Menu.Item key="welcome5">Welcome from CEO</Menu.Item>
+        </SubMenu>
+        <Menu.Item key="2">About Datum</Menu.Item>
+        <Menu.Item key="3">Courses</Menu.Item>
+        <Menu.Item key="4">Admission</Menu.Item>
+        <Menu.Item key="5">Student Life</Menu.Item>
+        <Menu.Item key="6">Services</Menu.Item>
+        <Menu.Item key="7">My Datum</Menu.Item>
+        <Menu.Item key="8">Agent</Menu.Item>
+        <Menu.Item key="9">Contact us</Menu.Item>
+      </Menu>
+    </Header>
+  </>
 )
 
-Header.propTypes = {
+MyHeader.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
-  siteTitle: ``,
+MyHeader.defaultProps = {
+  siteTitle: `Datum College`,
 }
 
-export default Header
+export default MyHeader

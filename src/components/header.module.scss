@@ -1,0 +1,35 @@
+$backgroundColor: #0d376a;
+
+.logo {
+  width: 55rem;
+  margin: auto;
+
+  @media only screen and (max-width: 980px) {
+    width: 100vw;
+  }
+
+  img {
+    width: 15rem;
+
+    @media only screen and (max-width: 980px) {
+      display: block;
+      margin: auto;
+    }
+  } 
+}
+
+.headerBar {
+  background-color: $backgroundColor !important;
+  width: 100%;
+}
+
+
+.navs {
+  background-color: $backgroundColor !important;
+  display: flex;
+  justify-content: center;
+ 
+  li {
+    color: white !important
+  }
+}
