@@ -22,7 +22,6 @@ $backgroundColor: #0d376a;
 .headerBar {
   background-color: $backgroundColor !important;
   width: 100%;
-  height: 50px;
 }
 
 
@@ -38,7 +37,7 @@ $backgroundColor: #0d376a;
 
 .pops {
   ul {
-    margin-top: -.5rem !important;
+    margin-top: -.4rem !important;
     background-color: $backgroundColor !important;
 
     li:hover {
