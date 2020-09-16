@@ -34,7 +34,7 @@ module.exports.createPages = async ({ graphql, actions, reporter }) => {
   result.data.allContentfulSubPage.nodes.forEach(node => {
     const slug = node.slug
     createPage({
-      path: slug,
+      path: "/" + slug,
       component: subPage,
       // In your blog post template's graphql query, you can use pagePath
       // as a GraphQL variable to query for data from the markdown file.
